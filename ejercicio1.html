@@ -1,0 +1,26 @@
+<html>
+	<head>
+	</head>
+	<body>
+		Entrada: <input type="text" name="entrada" id="entrada">
+		<br>
+		Salida: <input type="textarea" name="salida" id="salida">
+		<br>
+		<button onclick="calcular_suma(this);">Calcular</button>
+		
+		<script>
+			function calcular_suma(){
+				var cadena = document.getElementById("entrada").value;
+				var salida = document.getElementById("salida");
+				var arreglo = cadena.split(',');
+				var cont = 0;
+				for (var i = 0; i < arreglo.length; i++) {
+					cont = cont + parseInt(arreglo[i]);
+				};
+				salida.value = cont.toString();
+			}
+			
+		</script>
+	
+	</body>
+</html>
